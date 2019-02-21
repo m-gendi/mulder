@@ -30,7 +30,11 @@ pipeline {
           }
           dir('/home/jenkins/go/src/github.com/m-gendi/mulder/charts/preview') {
             sh "make preview"
-            sh "jx preview --app $APP_NAME --dir ../.."
+            sh "jx preview --app $APP_NAME --namespace $PREVIEW_NAMESPACE --dir ../.."
+            sh "wget --server-response --output-document=/dev/null --timeout=60 --tries=10 --retry-connrefused http://mulder.$PREVIEW_NAMESPACE/"
+          }
+          dir('/home/jenkins/go/src/github.com/m-gendi/mulder') {
+            sh "make test-integration MULDER_ADDR=mulder.$PREVIEW_NAMESPACE"
           }
         }
       }
@@ -43,6 +47,7 @@ pipeline {
         container('go') {
           dir('/home/jenkins/go/src/github.com/m-gendi/mulder') {
             checkout scm
+            sh "make test-unit"
 
             // ensure we're not on a detached head
             sh "git checkout master"
