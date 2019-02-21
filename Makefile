@@ -60,3 +60,5 @@ lint: vendor | $(PKGS) $(GOLINT) # ❷
 	    test -z "$$($(GOLINT) $$pkg | tee /dev/stderr)" || ret=1 ; \
 	done ; exit $$ret
 
+test-integration:
+	$(GO) test -v ./tests -addr ${MULDER_ADDR}
