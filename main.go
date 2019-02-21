@@ -18,25 +18,10 @@ const (
 
 var (
 	quotes = []interface{}{ // https://www.imdb.com/title/tt0106179/quotes
-		"I would never lie. I willfully participated in a campaign of misinformation.",
-		"Scully, I was like you once. I didn't know who to trust. Then I... I chose another path... another life, another fate, where I found my sister. The end of my world was unrecognizable and upside down. There was one thing that remained the same. You were my friend, and you told me the truth. Even when the world was falling apart, you were my constant. My touchstone.",
-		"Trust no one.",
-		"You know, they say when you talk to God it's prayer, but when God talks to you, it's schizophrenia.",
-		"Sorry, nobody down here but the FBI's most unwanted.",
-		"I have a theory. Do you want to hear it?",
-		"You have to be willing to see.",
-		"Scully, you have to believe me. Nobody else on this whole damn planet does or ever will. You're my one in five billion.",
-		"Scully, you are the only one I trust.",
-		"Sometimes the only sane answer to an insane world is insanity.",
-		"I've often felt that dreams are answers to questions we haven't yet figured out how to ask.",
-		"We've both lost so much... but I believe that what we're looking for is in the X-Files. I'm more certain than ever that the truth is in there.",
-		"If coincidences are coincidences, why do they feel so contrived?",
-		"And all the choices would then lead to this very moment. One wrong turn, and we wouldn't be sitting here together. Well, that says a lot. That says a lot, a lot, a lot.",
-		"The truth will save you, Scully. I think it'll save both of us.",
-		"THE TRUTH IS OUT THERE",
-		"I want to believe.",
-		"TRUST NO-ONE",
-		"What can I do about a Lie with an Official Seal on it?",
+		"Je voudrais déjà être roi",
+		"Libérée Delivrée je ne mentirais plus jamais",
+		"Un jour mon prince viendras",
+		"Hakuna Matata",
 	}
 
 	listenAddr          string
